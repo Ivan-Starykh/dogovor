@@ -22,13 +22,13 @@ body {
 	justify-content: center;
 	align-items:center;
 	font-family: Arial, sans-serif;
-	margin: 0;
+	/* margin: 10px; */
 	padding: 20px;
 }
 
 .body_title {
 text-align:left;
-	padding: 20px 15px 0px 0px;
+
 }
 
 form {
@@ -37,9 +37,12 @@ form {
 }
 
 .form_date {
+	/* display: flex;
+	justify-content: flex-start; */
 	/* max-width: 65%; */
+	width: 335px;
 	text-align: left;
-	width: 100%;
+	/* width: 100%; */
 }
 
 div {
