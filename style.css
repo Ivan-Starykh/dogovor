@@ -1,0 +1,78 @@
+/* обнуление стилей формы */
+
+input,
+
+select {
+  padding-block: 5px;
+}
+
+input {
+  overflow: visible;
+}
+
+label {
+	margin-inline-end: 10px;
+}
+
+/* стили основные */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+
+.body_title {
+	margin: 0 auto;
+	max-width: 50%;
+	padding-block: 50px;
+}
+
+form {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+.form_date {
+	max-width: 65%;
+	text-align: right;
+}
+
+div {
+	margin-bottom: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 300px;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.button{
+	padding: 10px 20px;
+	background-color: #e91e63;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #e12e13;
+}
+
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+
+
+
+
+
+
+
