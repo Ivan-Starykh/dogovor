@@ -1,86 +1,130 @@
 /* обнуление стилей формы */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} 
 
 input,
-
 select {
   padding-block: 5px;
 }
 
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 input {
-	height: 25px;
+  height: 25px;
   overflow: visible;
 }
 
 label {
-	margin-inline-end: 10px;
+  margin-inline-end: 10px;
 }
 
 /* стили основные */
 
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items:center;
-	font-family: Arial, sans-serif;
-	/* margin: 10px; */
-	padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+width: 100%;
+  padding: 20px;
 }
 
 .body_title {
-text-align:left;
-
+  text-align: left;
 }
 
 form {
-	/* max-width: 50%; */
-	margin: 0 auto;
+  /* max-width: 50%; */
+  margin: 0 auto;
+}
+
+.header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+padding-block: 10px;
 }
 
 .form_date {
-	/* display: flex;
-	justify-content: flex-start; */
-	/* max-width: 65%; */
-	width: 335px;
-	text-align: left;
-	/* width: 100%; */
+  width: 335px;
+  text-align: center;
+  margin-bottom: 25px;
+  /* width: 100%; */
 }
 
 div {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 label {
-	display: inline-block;
-	width: 150px;
-	font-weight: bold;
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"] {
-	width: 300px;
-	padding: 5px;
-	font-size: 16px;
+  width: 300px;
+  padding: 5px;
+  font-size: 16px;
 }
 
-.button{
-	padding: 10px 20px;
-	background-color: #e91e63;
-	color: #fff;
-	border: none;
-	cursor: pointer;
+.button {
+  padding: 10px 20px;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover {
-	background-color: #e12e13;
+  background-color: #e12e13;
 }
 
-input:invalid:not(:placeholder-shown) {border-color: red;}
-input:valid:not(:placeholder-shown) {border-color: green;}
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
 
+#mail {
+  display: flex;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
-
-
-
-
-
+.menu__nav-container{
+  display: flex;
+  justify-content:space-around;
+/* align-content: center;
+align-items: center; */
+  width: 100%;
+}
+.menu__nav {
+display: flex;
+  width: `100%;
+  list-style-type: none;
+padding-block: 15px;
+}
+.nav-item{
+	max-width: 100%;
+	max-height: 100%;
+	padding: 10px 5px;
+	/* border-radius: 6px; */
+	background-color: ;
+	cursor: pointer;
+}
+.nav-item:hover{
+	outline: 2px solid #e91e63;
+}
