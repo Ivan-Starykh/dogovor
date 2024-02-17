@@ -4,6 +4,10 @@
 *::after {
   box-sizing: border-box;
 } 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 input,
 select {
@@ -132,5 +136,18 @@ padding-block: 15px;
 @media (width < 720px) {
   .menu__nav {
 flex-direction: column;
+gap: 15px;
+width: 100%;
+padding-inline: 50px;
   }
+	.nav-item{
+		background-color: #e91e63;
+		padding: 10px 20px;
+		text-align: center;
+		color: #fff;
+		font-size: 18px;
+	}
+	.nav-item:active{
+		background-color: green;
+	}
 }
