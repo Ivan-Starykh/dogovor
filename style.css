@@ -7,6 +7,7 @@
 a {
   text-decoration: none;
   color: inherit;
+	display: block;
 }
 
 input,
@@ -133,6 +134,14 @@ padding-block: 15px;
 	outline: 2px solid #e91e63;
 }
 
+.menu-color{
+	background-color:mediumseagreen;
+}
+
+.active {
+  background-color: green;
+}
+
 @media (width < 720px) {
   .menu__nav {
 flex-direction: column;
@@ -147,7 +156,7 @@ padding-inline: 50px;
 		color: #fff;
 		font-size: 18px;
 	}
-	.nav-item:active{
-		background-color: green;
+	.menu-color{
+		background-color:mediumseagreen;
 	}
 }

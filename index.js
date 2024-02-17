@@ -1,5 +1,6 @@
 		// валидация и помощь в наборе телефонного номера
 		document.addEventListener('DOMContentLoaded', function () {
+
 			const today = new Date();  
 
 			document.getElementById(`date`).textContent = today.toLocaleDateString(`ru-RU`, {
