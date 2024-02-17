@@ -128,3 +128,9 @@ padding-block: 15px;
 .nav-item:hover{
 	outline: 2px solid #e91e63;
 }
+
+@media (width < 720px) {
+  .menu__nav {
+flex-direction: column;
+  }
+}
