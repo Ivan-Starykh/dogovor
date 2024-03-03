@@ -78,7 +78,7 @@ function getNextUniqueNumber() {
 
 if (uniqueNumber !== null) {
 					loadFile(
-							"/input2.docx",
+							"/input.docx",
 							function (error, content) {
 									if (error) {
 											throw error;

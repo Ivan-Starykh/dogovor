@@ -82,15 +82,16 @@ input[type="email"] {
   font-size: 16px;
 }
 
-.button {
+.form__button {
   padding: 10px 20px;
   background-color: #e91e63;
   color: #fff;
   border: none;
   cursor: pointer;
+	pointer-events: all;
 }
 
-.button:hover {
+.form__button:hover {
   background-color: #e12e13;
 }
 
@@ -123,6 +124,7 @@ display: flex;
 padding-block: 15px;
 }
 .nav-item{
+	display:inline-block;
 	max-width: 100%;
 	max-height: 100%;
 	padding: 10px 5px;
@@ -130,13 +132,16 @@ padding-block: 15px;
 	background-color: ;
 	cursor: pointer;
 }
+
 .nav-item:hover{
 	outline: 2px solid #e91e63;
 }
 
 .menu-color{
-	background-color:mediumseagreen;
-}
+	background-color: green;
+	color:#fff;
+	/* outline: 2px solid green; */
+};
 
 .active {
   background-color: green;
@@ -159,4 +164,23 @@ padding-inline: 50px;
 	.menu-color{
 		background-color:mediumseagreen;
 	}
+}
+
+/* валидация поведение */
+
+.form__input_type_error {
+  border-color: rgba(255, 0, 0, 1);
+}
+
+.form__error_visible{
+	font-size: 12px;
+  color: rgba(255, 0, 0, 1); 
+  display: block; 
+}
+
+.form__button_disabled {
+  background-color: rgba(0, 0, 0, 0); 
+	border: 1px solid rgb(197 197 197);
+  color: rgb(197 197 197); /* Цвет текста неактивной кнопки */
+  cursor: not-allowed; /* Запрещаем курсору при неактивной кнопке */
 }
