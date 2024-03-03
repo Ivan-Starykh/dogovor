@@ -1,6 +1,3 @@
-// import { checkImageValidity } from "./api.js";
-// import { profileForm } from "./constants.js";
-
 
 // Настройки валидации
 const validationConfig = {

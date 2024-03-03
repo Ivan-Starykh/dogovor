@@ -46,6 +46,9 @@ const date = `${year}-${month}-${day}`;
 	}
 });
 
+// Проверяем, есть ли уже массив уникальных номеров в Local Storage
+let uniqueNumbers = JSON.parse(localStorage.getItem('uniqueNumbers')) || [];
+
 // Генерация массива уникальных номеров
 function generateUniqueNumbers(count) {
   let numbers = [];
@@ -55,29 +58,39 @@ function generateUniqueNumbers(count) {
   return numbers;
 }
 
-// Инициализация массива номеров
-let uniqueNumbers = generateUniqueNumbers(30000);
-
 // Функция для получения следующего уникального номера
 function getNextUniqueNumber() {
-  if (uniqueNumbers.length > 0) {
-    return uniqueNumbers.shift(); // Берем и удаляем первый элемент из массива
-  } else {
-    console.error("Нет доступных уникальных номеров");
-    return null;
+  if (uniqueNumbers.length === 0) {
+    uniqueNumbers = generateUniqueNumbers(30000); // Используйте вашу реальную длину массива
   }
+  return uniqueNumbers.shift();
+}
+
+// Функция для сохранения массива уникальных номеров в Local Storage
+function saveUniqueNumbers() {
+  localStorage.setItem('uniqueNumbers', JSON.stringify(uniqueNumbers));
+}
+
+let uniqueNumber = getNextUniqueNumber();
+if (uniqueNumber !== null) {
+  // Ваш код обработки
+  console.log(uniqueNumber);
+
+  // Сохраняем обновленный массив уникальных номеров в Local Storage
+  saveUniqueNumbers();
 }
 
 			function loadFile(inputFilePath, callback) {
 					PizZipUtils.getBinaryContent(inputFilePath, callback);
 			}
 			// Обработчик кнопки "ОТПРАВИТЬ"
-			window.generate = function generate(inputFilePath) {
+			window.generate = function generate() {
 				  // Получаем следующий уникальный номер
   let uniqueNumber = getNextUniqueNumber();
 
 if (uniqueNumber !== null) {
 	// const inputFilePath = "/input.docx";
+	const inputFilePath = document.querySelector(".form__button").dataset.inputFilePath;
 					loadFile(
 						inputFilePath,
 							function (error, content) {
