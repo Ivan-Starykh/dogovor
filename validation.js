@@ -96,7 +96,9 @@ function enableValidation() {
     evt.preventDefault();
 		// Дополнительная проверка перед отправкой формы
 		if (inputList.every((inputElement) => inputElement.validity.valid && inputElement.value.trim() !== '')) {
-			handleFormSubmit(); // Вызываем функцию для отправки данных
+			
+			const inputFilePath = document.getElementById("inputFilePath").value;
+			handleFormSubmit(inputFilePath); // Вызываем функцию для отправки данных
 
 			        // Блокируем кнопку после отправки данных
 							toggleButtonState(formElement, inputList, validationConfig);
@@ -115,14 +117,14 @@ function enableValidation() {
   }
 }
 
-function handleFormSubmit() {
+function handleFormSubmit(inputFilePath) {
   const formElement = document.querySelector(validationConfig.formSelector);
   const inputList = Array.from(formElement.querySelectorAll(validationConfig.inputSelector));
 
   if (inputList.every((inputElement) => inputElement.validity.valid && inputElement.value.trim() !== '')) {
     // Вызываем функцию из index.js для отправки данных
     if (typeof generate === 'function') {
-      generate();
+      generate(inputFilePath);
     }
   }
 }

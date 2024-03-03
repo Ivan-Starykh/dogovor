@@ -68,17 +68,18 @@ function getNextUniqueNumber() {
   }
 }
 
-			function loadFile(url, callback) {
-					PizZipUtils.getBinaryContent(url, callback);
+			function loadFile(inputFilePath, callback) {
+					PizZipUtils.getBinaryContent(inputFilePath, callback);
 			}
 			// Обработчик кнопки "ОТПРАВИТЬ"
-			window.generate = function generate() {
+			window.generate = function generate(inputFilePath) {
 				  // Получаем следующий уникальный номер
   let uniqueNumber = getNextUniqueNumber();
 
 if (uniqueNumber !== null) {
+	// const inputFilePath = "/input.docx";
 					loadFile(
-							"/input.docx",
+						inputFilePath,
 							function (error, content) {
 									if (error) {
 											throw error;
