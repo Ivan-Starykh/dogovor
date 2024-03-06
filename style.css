@@ -3,11 +3,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
-} 
+}
 a {
   text-decoration: none;
   color: inherit;
-	display: block;
+  display: block;
 }
 
 input,
@@ -15,10 +15,11 @@ select {
   padding-block: 5px;
 }
 
-ul, li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 input {
@@ -38,8 +39,9 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-width: 100%;
+  width: 100%;
   padding: 20px;
+	overflow-y: hidden;
 }
 
 .body_title {
@@ -47,22 +49,20 @@ width: 100%;
 }
 
 form {
-  /* max-width: 50%; */
   margin: 0 auto;
 }
 
-.header{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-padding-block: 10px;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 10px;
 }
 
 .form_date {
   width: 335px;
   text-align: center;
   margin-bottom: 25px;
-  /* width: 100%; */
 }
 
 div {
@@ -88,7 +88,7 @@ input[type="email"] {
   color: #fff;
   border: none;
   cursor: pointer;
-	pointer-events: all;
+  pointer-events: all;
 }
 
 .form__button:hover {
@@ -110,38 +110,34 @@ input:valid:not(:placeholder-shown) {
   width: 100%;
 }
 
-.menu__nav-container{
+.menu__nav-container {
   display: flex;
-  justify-content:space-around;
-/* align-content: center;
-align-items: center; */
+  justify-content: space-around;
   width: 100%;
 }
 .menu__nav {
-display: flex;
+  display: flex;
   width: `100%;
   list-style-type: none;
-padding-block: 15px;
+  padding-block: 15px;
 }
-.nav-item{
-	display:inline-block;
-	max-width: 100%;
-	max-height: 100%;
-	padding: 10px 5px;
-	/* border-radius: 6px; */
-	background-color: ;
-	cursor: pointer;
-}
-
-.nav-item:hover{
-	outline: 2px solid #e91e63;
+.nav-item {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px 5px;
+  background-color: ;
+  cursor: pointer;
 }
 
-.menu-color{
-	background-color: green;
-	color:#fff;
-	/* outline: 2px solid green; */
-};
+.nav-item:hover {
+  outline: 2px solid #e91e63;
+}
+
+.menu-color {
+  background-color: green;
+  color: #fff;
+}
 
 .active {
   background-color: green;
@@ -149,21 +145,21 @@ padding-block: 15px;
 
 @media (width < 720px) {
   .menu__nav {
-flex-direction: column;
-gap: 15px;
-width: 100%;
-padding-inline: 50px;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding-inline: 50px;
   }
-	.nav-item{
-		background-color: #e91e63;
-		padding: 10px 20px;
-		text-align: center;
-		color: #fff;
-		font-size: 18px;
-	}
-	.menu-color{
-		background-color:mediumseagreen;
-	}
+  .nav-item {
+    background-color: #e91e63;
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+  }
+  .menu-color {
+    background-color: mediumseagreen;
+  }
 }
 
 /* валидация поведение */
@@ -172,15 +168,15 @@ padding-inline: 50px;
   border-color: rgba(255, 0, 0, 1);
 }
 
-.form__error_visible{
-	font-size: 12px;
-  color: rgba(255, 0, 0, 1); 
-  display: block; 
+.form__error_visible {
+  font-size: 12px;
+  color: rgba(255, 0, 0, 1);
+  display: block;
 }
 
 .form__button_disabled {
-  background-color: rgba(0, 0, 0, 0); 
-	border: 1px solid rgb(197 197 197);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(197 197 197);
   color: rgb(197 197 197); /* Цвет текста неактивной кнопки */
   cursor: not-allowed; /* Запрещаем курсору при неактивной кнопке */
 }
